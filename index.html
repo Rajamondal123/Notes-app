@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Notes App </h1>
+    <h3>Enter your Note - </h3>
+    <input type="text" name="note" id="note">
+    <button onclick="addNotes()">Submit</button>
+
+    <h2>Your Notes :</h2>
+    <ol class="mynotes" type="1">
+        <li>To Study</li>
+        <li>To Eat</li>
+        <li>To Work</li>
+    </ol>
+    <script>
+
+
+        function onTest() {
+            header.innerHTML = 'Hello World'
+        }
+        function addNotes() {
+            //     let header=document.querySelector('h1')
+            let yourNotes = document.querySelector('.mynotes')
+            let listNote = document.createElement('li')
+            let noteitem = document.querySelector('#note')
+            listNote.innerHTML = noteitem.value;
+            yourNotes.appendChild(listNote)
+            console.log(document.querySelector('#note').value);
+            noteitem.value = ''
+        }
+    </script>
+</body>
+
+</html>
